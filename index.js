@@ -2,10 +2,10 @@ import React from 'react';
 import {AppRegistry, Button, NativeModules, StyleSheet, Text, View} from 'react-native';
 
 const Integration = () => {
-    const {ReactParamModule} = NativeModules
+    const {ReactParam} = NativeModules
     const onPress = () => {
         console.log('Button pressed');
-        ReactParamModule.sendParam('testName', 'testValue')
+        ReactParam.sendParam('testName', 'testValue')
     }
     return (
         <View style={styles.container}>
