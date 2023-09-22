@@ -21,6 +21,7 @@ class ReactApplication : Application(), ReactApplication {
 
         override fun getPackages(): MutableList<ReactPackage> {
             val packages = PackageList(this).packages.toMutableList()
+            packages.add(RnAppPackage())
             // Packages that cannot be autolinked yet can be added manually here
             return packages
         }

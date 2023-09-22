@@ -1,11 +1,17 @@
 import React from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import {AppRegistry, Button, NativeModules, StyleSheet, Text, View} from 'react-native';
 
 const Integration = () => {
+    const {ReactParamModule} = NativeModules
+    const onPress = () => {
+        console.log('Button pressed');
+        ReactParamModule.sendParam('testName', 'testValue')
+    }
     return (
         <View style={styles.container}>
             <View style={[styles.box, {backgroundColor: '#76b6e4'}]}>
                 <Text style={styles.text}>React Native</Text>
+                <Button title="Send props" onPress={onPress}/>
             </View>
         </View>
     );
