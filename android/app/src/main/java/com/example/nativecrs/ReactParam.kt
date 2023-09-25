@@ -12,11 +12,6 @@ class ReactParam (reactContext: ReactApplicationContext) : ReactContextBaseJavaM
     override fun getName() = "ReactParam"
 
     @ReactMethod
-    fun sendParam(name: String, value: String) {
-        Log.d("ReactParam module", "send param $name with value $value")
-    }
-
-    @ReactMethod
     fun setParam(value: String, callback: Callback) {
         savedParam = value
         callback.invoke(value)
