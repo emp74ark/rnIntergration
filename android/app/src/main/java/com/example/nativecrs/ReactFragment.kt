@@ -6,10 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.facebook.hermes.reactexecutor.HermesExecutorFactory
 import com.facebook.react.PackageList
 import com.facebook.react.ReactInstanceManager
 import com.facebook.react.ReactRootView
 import com.facebook.react.common.LifecycleState
+import com.facebook.react.shell.MainReactPackage
 
 
 abstract class ReactFragment : Fragment() {
@@ -32,7 +34,9 @@ abstract class ReactFragment : Fragment() {
             .setCurrentActivity(activity)
             .setBundleAssetName("index.android.bundle")
             .setJSMainModulePath("index")
+            .setJavaScriptExecutorFactory(HermesExecutorFactory())
             .addPackages(packages)
+            .addPackage(RnAppPackage())
             .setUseDeveloperSupport(BuildConfig.DEBUG)
             .setInitialLifecycleState(LifecycleState.BEFORE_RESUME)
             .build();
