@@ -4,13 +4,12 @@ import android.util.Log
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
 import com.facebook.react.bridge.ReactMethod
+import com.facebook.react.bridge.Callback
 
 var savedParam: String = "start"
 
 class ReactParam (reactContext: ReactApplicationContext) : ReactContextBaseJavaModule(reactContext) {
     override fun getName() = "ReactParam"
-
-    // var savedParam: String = "start"
 
     @ReactMethod
     fun sendParam(name: String, value: String) {
@@ -18,8 +17,10 @@ class ReactParam (reactContext: ReactApplicationContext) : ReactContextBaseJavaM
     }
 
     @ReactMethod
-    fun setParam(value: String) {
+    fun setParam(value: String, callback: Callback) {
         savedParam = value
+        callback.invoke(value)
+
     }
 
     @ReactMethod(isBlockingSynchronousMethod = true)

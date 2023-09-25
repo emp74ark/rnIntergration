@@ -1,13 +1,15 @@
 import React, {useState} from 'react';
-import {AppRegistry, Button, NativeModules, StyleSheet, Text, View, TextInput} from 'react-native';
+import {AppRegistry, Button, NativeModules, StyleSheet, Text, TextInput, View} from 'react-native';
 
 const Integration = () => {
     const {ReactParam} = NativeModules
-    const [param, setParam] = useState('');
+    const [param, setParam] = useState(ReactParam.getParam());
 
     const onPress = () => {
         if (param?.trim()) {
-            ReactParam.setParam(param)
+            ReactParam.setParam(param, (value) => {
+                setParam(value)
+            })
         }
     }
 
@@ -17,8 +19,8 @@ const Integration = () => {
                 <Text style={styles.text}>React Native</Text>
             </View>
             <TextInput onChangeText={(value) => setParam(value)} placeholder="Enter new param value"/>
-            <Button title="Send props" onPress={onPress}/>
-            <Text style={styles.text}>Param from module: {ReactParam.getParam()}</Text>
+            <Button title="Send param" onPress={onPress}/>
+            <Text style={styles.text}>Param from module: {param}</Text>
         </View>
     );
 };
