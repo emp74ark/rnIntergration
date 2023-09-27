@@ -1,0 +1,23 @@
+diff --git a/node_modules/@react-native-community/masked-view/android/build.gradle b/node_modules/@react-native-community/masked-view/android/build.gradle
+index c4ee933..66d60d4 100644
+--- a/node_modules/@react-native-community/masked-view/android/build.gradle
++++ b/node_modules/@react-native-community/masked-view/android/build.gradle
+@@ -18,7 +18,9 @@ buildscript {
+ apply plugin: 'com.android.library'
+ 
+ android {
+-  compileSdkVersion safeExtGet('compileSdkVersion', 28)
++  namespace = "org.reactnative.maskedview"
++
++  compileSdkVersion safeExtGet('compileSdkVersion', 34)
+   buildToolsVersion safeExtGet('buildToolsVersion', '28.0.3')
+ 
+   defaultConfig {
+diff --git a/node_modules/@react-native-community/masked-view/android/src/main/AndroidManifest.xml b/node_modules/@react-native-community/masked-view/android/src/main/AndroidManifest.xml
+index 8e9ce44..a2f47b6 100644
+--- a/node_modules/@react-native-community/masked-view/android/src/main/AndroidManifest.xml
++++ b/node_modules/@react-native-community/masked-view/android/src/main/AndroidManifest.xml
+@@ -1,2 +1,2 @@
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="org.reactnative.maskedview">
++<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+ </manifest>
