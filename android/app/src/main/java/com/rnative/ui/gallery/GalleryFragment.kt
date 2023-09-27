@@ -1,6 +1,6 @@
-package com.example.nativecrs.ui.gallery
+package com.rnative.ui.gallery
 
-import com.example.nativecrs.ReactFragment
+import com.rnative.ReactFragment
 
 class GalleryFragment : ReactFragment() {
 

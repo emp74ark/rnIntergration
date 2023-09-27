@@ -1,4 +1,4 @@
-package com.example.nativecrs
+package com.rnative
 
 import android.util.Log
 import com.facebook.react.bridge.ReactApplicationContext

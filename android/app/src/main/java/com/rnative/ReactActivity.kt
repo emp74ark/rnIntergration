@@ -1,4 +1,4 @@
-package com.example.nativecrs
+package com.rnative
 
 import android.app.Activity
 import android.os.Bundle

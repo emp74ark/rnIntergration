@@ -6,11 +6,11 @@ plugins {
 apply plugin: "com.facebook.react"
 
 android {
-    namespace 'com.example.nativecrs'
+    namespace 'com.rnative'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.example.nativecrs"
+        applicationId "com.rnative"
         minSdk 21
         targetSdk 33
         versionCode 1

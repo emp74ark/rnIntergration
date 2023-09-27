@@ -1,4 +1,4 @@
-package com.example.nativecrs
+package com.rnative
 
 import org.junit.Test
 

@@ -1,6 +1,6 @@
-package com.example.nativecrs.ui.home
+package com.rnative.ui.home
 
-import com.example.nativecrs.ReactFragment
+import com.rnative.ReactFragment
 
 class HomeFragment : ReactFragment() {
 

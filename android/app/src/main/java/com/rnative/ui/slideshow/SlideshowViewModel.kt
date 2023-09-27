@@ -1,4 +1,4 @@
-package com.example.nativecrs.ui.slideshow
+package com.rnative.ui.slideshow
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
