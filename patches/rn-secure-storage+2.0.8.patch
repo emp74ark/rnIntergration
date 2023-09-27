@@ -1,0 +1,22 @@
+diff --git a/node_modules/rn-secure-storage/android/build.gradle b/node_modules/rn-secure-storage/android/build.gradle
+index 7dd95cc..c8ec247 100644
+--- a/node_modules/rn-secure-storage/android/build.gradle
++++ b/node_modules/rn-secure-storage/android/build.gradle
+@@ -21,7 +21,8 @@ buildscript {
+ apply plugin: 'com.android.library'
+ 
+ android {
+-    compileSdkVersion safeExtGet('compileSdkVersion', 28)
++    namespace = "com.taluttasgiran.rnsecurestorage"
++    compileSdkVersion safeExtGet('compileSdkVersion', 34)
+     defaultConfig {
+         minSdkVersion safeExtGet('minSdkVersion', 16)
+         targetSdkVersion safeExtGet('targetSdkVersion', 28)
+diff --git a/node_modules/rn-secure-storage/android/src/main/AndroidManifest.xml b/node_modules/rn-secure-storage/android/src/main/AndroidManifest.xml
+index d390a63..94cbbcf 100644
+--- a/node_modules/rn-secure-storage/android/src/main/AndroidManifest.xml
++++ b/node_modules/rn-secure-storage/android/src/main/AndroidManifest.xml
+@@ -1,2 +1 @@
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-          package="com.taluttasgiran.rnsecurestorage"/>
++<manifest xmlns:android="http://schemas.android.com/apk/res/android" />

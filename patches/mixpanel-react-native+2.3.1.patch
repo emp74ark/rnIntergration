@@ -1,0 +1,20 @@
+diff --git a/node_modules/mixpanel-react-native/android/build.gradle b/node_modules/mixpanel-react-native/android/build.gradle
+index 26efaa3..38d9105 100644
+--- a/node_modules/mixpanel-react-native/android/build.gradle
++++ b/node_modules/mixpanel-react-native/android/build.gradle
+@@ -11,6 +11,7 @@ buildscript {
+ apply plugin: 'com.android.library'
+ 
+ android {
++    namespace = "com.mixpanel.reactnative"
+     compileSdkVersion 33
+     buildToolsVersion "30.0.3"
+     defaultConfig {
+diff --git a/node_modules/mixpanel-react-native/android/src/main/AndroidManifest.xml b/node_modules/mixpanel-react-native/android/src/main/AndroidManifest.xml
+index 4175f5d..94cbbcf 100644
+--- a/node_modules/mixpanel-react-native/android/src/main/AndroidManifest.xml
++++ b/node_modules/mixpanel-react-native/android/src/main/AndroidManifest.xml
+@@ -1,2 +1 @@
+-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+-          package="com.mixpanel.reactnative" />
++<manifest xmlns:android="http://schemas.android.com/apk/res/android" />
